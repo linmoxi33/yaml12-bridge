@@ -1,0 +1,51 @@
+# Kubernetes manifest with the kinds of values that break across schemas.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  labels:
+    app: api
+    tier: backend
+  annotations:
+    build/hash: '3900e128'
+    deployed-at: 750
+    revision: 1.10
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api
+          image: registry.example.com/api:1.10
+          ports:
+            - containerPort: 8080
+          env:
+            - name: LOG_LEVEL
+              value: info
+            - name: FEATURE_FLAG
+              value: true
+            - name: COUNTRY_CODE
+              value: false
+            - name: TIMEOUT
+              value: 30
+          resources:
+            limits:
+              cpu: '1e3'
+              memory: 512Mi
+            requests:
+              cpu: 500m
+              memory: 256Mi
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+      volumes:
+        - name: config
+          configMap:
+            name: api-config
+            defaultMode: 420

@@ -1,0 +1,38 @@
+# Realistic GitHub Actions workflow, written the way people actually write them.
+# The `on:` key is the classic 1.1/1.2 trap: 1.1 reads it as boolean True.
+name: CI
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '30 2 * * 1'
+env:
+  PYTHON_VERSION: 3.11
+  NODE_VERSION: '20'
+  RUST_LOG: info
+  DEBUG: no
+  SEND_MAIL: off
+  REGION: NO
+  BUILD_TIME: 12:30
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Cache
+        uses: actions/cache@v4
+        with:
+          key: deps-${{ hashFiles('**/requirements.txt') }}
+          path: |
+            ~/.cache/pip
+            .venv
+      - name: Run tests
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pytest -q

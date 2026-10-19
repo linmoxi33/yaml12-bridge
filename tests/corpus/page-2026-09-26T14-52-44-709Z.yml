@@ -1,0 +1,118 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]: 白玉画廊
+    - generic [ref=f1e5]: WHITE GALLERY
+  - complementary "楼层导览" [ref=f1e9]:
+    - button "01" [ref=f1e10] [cursor=pointer]
+    - button "02" [ref=f1e13] [cursor=pointer]
+    - button "03" [ref=f1e16] [cursor=pointer]
+    - button "04" [ref=f1e19] [cursor=pointer]
+  - banner [ref=f1e22]:
+    - generic [ref=f1e23]:
+      - generic [ref=f1e24]: 白玉画廊
+      - generic [ref=f1e25]: WHITE GALLERY
+    - navigation [ref=f1e26]:
+      - generic [ref=f1e27] [cursor=pointer]: 展览
+      - generic [ref=f1e28] [cursor=pointer]: 层次
+      - generic [ref=f1e29] [cursor=pointer]: 胶卷
+      - generic [ref=f1e30] [cursor=pointer]: 折叠
+  - main:
+    - generic [aria-hidden]: "01"
+    - generic:
+      - heading "白玉画廊" [level=1]:
+        - generic: 白
+        - generic: 玉
+        - generic: 画
+        - generic: 廊
+      - paragraph: WHITE GALLERY — EXHIBITION N°01
+    - complementary:
+      - generic: 以一色 · 见层次
+    - generic:
+      - generic: N°01 — PORCELAIN & GRID
+      - generic: SCROLL
+      - generic: MMXXVI
+  - generic [ref=f1e31]:
+    - generic [ref=f1e32]:
+      - generic [ref=f1e33]: ACT 02
+      - heading "层次 LAYERS" [level=2] [ref=f1e34]
+      - paragraph [ref=f1e35]: 一种颜色，四种手段：网格密度 · 阴影海拔 · 视差速率 · 光影体积。
+      - generic [ref=f1e36]: 标本柜 A — 三件展品
+    - generic [ref=f1e37]:
+      - article [ref=f1e38]:
+        - text: 展品 01
+        - heading "书页 PAGES" [level=3] [ref=f1e39]:
+          - text: 书页
+          - generic [ref=f1e40]: PAGES
+        - paragraph [ref=f1e41]: 纸上的展览。一本可以翻动的白色目录，等风来。
+      - article [ref=f1e43]:
+        - text: 展品 02
+        - heading "胶片盘 REEL" [level=3] [ref=f1e44]:
+          - text: 胶片盘
+          - generic [ref=f1e45]: REEL
+        - paragraph [ref=f1e46]: 旋转的观看。八帧画面绕柱而行，拖动它，像换一盘胶卷。
+      - article [ref=f1e48]:
+        - text: 展品 03
+        - heading "折叠 FOLD" [level=3] [ref=f1e49]:
+          - text: 折叠
+          - generic [ref=f1e50]: FOLD
+        - paragraph [ref=f1e51]: 收拢的空间。整面版面将被折起，直到只剩一粒白。
+      - generic [aria-hidden] [ref=f1e53]:
+        - generic [ref=f1e54]: "1240"
+        - text: mm — 展柜跨度
+  - generic [ref=f1e58]:
+    - generic [aria-hidden]: FR·03
+    - generic [ref=f1e61]:
+      - generic [ref=f1e62]: FRAME 03
+      - heading "听海 · THE TIDE" [level=3] [ref=f1e63]
+    - generic [ref=f1e66]:
+      - button "播放或暂停" [ref=f1e67] [cursor=pointer]: ▶
+      - generic [ref=f1e68]:
+        - generic [ref=f1e69]: 海屿你
+        - generic [ref=f1e70]: 马也_Crabbit & Cole先生
+      - generic [ref=f1e71] [cursor=pointer]
+      - generic [ref=f1e72]: 0:00 / 4:56
+      - button "选歌" [ref=f1e73] [cursor=pointer]: ☰
+    - generic:
+      - generic:
+        - generic: 选歌 · TRACKS
+        - generic: 01 / 03
+      - generic:
+        - button "01 海屿你 马也_Crabbit & Cole先生 4:56":
+          - generic: "01"
+          - generic: 海屿你
+          - generic: 马也_Crabbit & Cole先生
+          - generic: 4:56
+        - button "02 悬溺 葛东琪 3:17":
+          - generic: "02"
+          - generic: 悬溺
+          - generic: 葛东琪
+          - generic: 3:17
+        - button "03 海底 一支榴莲 4:16":
+          - generic: "03"
+          - generic: 海底
+          - generic: 一支榴莲
+          - generic: 4:16
+    - generic [ref=f1e74]: ◂ 滚轮切歌 · 滚动继续 ▸
+    - button "▶ 点击画面 · 开始放映 ♪ 海屿你 · 马也_Crabbit" [ref=f1e75] [cursor=pointer]:
+      - generic [ref=f1e77]: ▶ 点击画面 · 开始放映
+      - generic [ref=f1e78]: ♪ 海屿你 · 马也_Crabbit
+  - button "♪ 海屿你 — 播放中 · 点此回到放映厅"
+  - generic [ref=f1e79]:
+    - generic [ref=f1e80]:
+      - generic [ref=f1e81]: ACT 05
+      - heading "折叠 FOLD" [level=2] [ref=f1e82]
+    - generic [ref=f1e84]:
+      - generic [ref=f1e86]:
+        - generic [ref=f1e87]: 白玉画廊 · N°01
+        - generic [ref=f1e88]: 终章
+        - heading "白玉画廊 — 完" [level=3] [ref=f1e89]
+        - paragraph [ref=f1e90]: 一种颜色，走过五幕。网格记下层次，光影记下体积，冰青一色记下唯一的心跳。
+      - generic [ref=f1e94]:
+        - generic [ref=f1e95]: 策展 — WHITE GALLERY
+        - generic [ref=f1e96]: 材质 — PORCELAIN & GRID
+        - generic [ref=f1e97]: 色彩 — 一粒冰青
+        - generic [ref=f1e98]: BGM — 海屿你 / 马也_Crabbit
+        - generic [ref=f1e99]: FILM — WALLPAPER ENGINE N°3387913668
+  - contentinfo [ref=f1e101]:
+    - generic [ref=f1e102]: 白玉画廊
+    - generic [ref=f1e103]: WHITE GALLERY — MMXXVI · PORCELAIN, GRID & ONE DROP OF ICE

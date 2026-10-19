@@ -1,0 +1,43 @@
+---
+# Ansible playbook: the historical home of `yes`/`no`/`on`/`off` booleans.
+- name: Configure web tier
+  hosts: webservers
+  become: yes
+  vars:
+    enable_tls: yes
+    legacy_mode: no
+    max_clients: 1_000
+    listen_at: 1:30:00
+    umask: 022
+  tasks:
+    - name: Install packages
+      ansible.builtin.package:
+        name:
+          - nginx
+          - certbot
+        state: present
+      notify: reload nginx
+
+    - name: Write config
+      ansible.builtin.template:
+        src: nginx.conf.j2
+        dest: /etc/nginx/nginx.conf
+        mode: '0644'
+        backup: yes
+
+    - name: Enable service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: on
+
+    - name: Toggle maintenance
+      ansible.builtin.command: /usr/local/bin/maintenance.sh
+      when: maintenance_mode | default(false)
+      changed_when: no
+
+  handlers:
+    - name: reload nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded

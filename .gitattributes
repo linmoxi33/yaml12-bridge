@@ -1,0 +1,8 @@
+# Normalise line endings on checkout so the byte-precise migration tests
+# behave the same on Windows, macOS and Linux.
+* text=auto eol=lf
+
+# Binary assets must not be touched.
+*.png binary
+*.whl binary
+*.gz binary

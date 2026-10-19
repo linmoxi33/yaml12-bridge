@@ -1,0 +1,87 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: 白玉画廊
+    - generic [ref=e5]: WHITE GALLERY
+  - complementary "楼层导览" [ref=e9]:
+    - button "01" [ref=e10] [cursor=pointer]
+    - button "02" [ref=e13] [cursor=pointer]
+    - button "03" [ref=e16] [cursor=pointer]
+    - button "04" [ref=e19] [cursor=pointer]
+  - banner [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]: 白玉画廊
+      - generic [ref=e25]: WHITE GALLERY
+    - navigation [ref=e26]:
+      - generic [ref=e27] [cursor=pointer]: 展览
+      - generic [ref=e28] [cursor=pointer]: 层次
+      - generic [ref=e29] [cursor=pointer]: 胶卷
+      - generic [ref=e30] [cursor=pointer]: 折叠
+  - main:
+    - generic [aria-hidden]: "01"
+    - generic:
+      - heading "白玉画廊" [level=1]:
+        - generic: 白
+        - generic: 玉
+        - generic: 画
+        - generic: 廊
+      - paragraph: WHITE GALLERY — EXHIBITION N°01
+    - complementary:
+      - generic: 以一色 · 见层次
+    - generic:
+      - generic: N°01 — PORCELAIN & GRID
+      - generic: SCROLL
+      - generic: MMXXVI
+  - generic [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]: ACT 02
+      - heading "层次 LAYERS" [level=2] [ref=e34]
+      - paragraph [ref=e35]: 一种颜色，四种手段：网格密度 · 阴影海拔 · 视差速率 · 光影体积。
+      - generic [ref=e36]: 标本柜 A — 三件展品
+    - generic [ref=e37]:
+      - article [ref=e38]:
+        - text: 展品 01
+        - heading "书页 PAGES" [level=3] [ref=e39]:
+          - text: 书页
+          - generic [ref=e40]: PAGES
+        - paragraph [ref=e41]: 纸上的展览。一本可以翻动的白色目录，等风来。
+      - article [ref=e43]:
+        - text: 展品 02
+        - heading "胶片盘 REEL" [level=3] [ref=e44]:
+          - text: 胶片盘
+          - generic [ref=e45]: REEL
+        - paragraph [ref=e46]: 旋转的观看。八帧画面绕柱而行，拖动它，像换一盘胶卷。
+      - article [ref=e48]:
+        - text: 展品 03
+        - heading "折叠 FOLD" [level=3] [ref=e49]:
+          - text: 折叠
+          - generic [ref=e50]: FOLD
+        - paragraph [ref=e51]: 收拢的空间。整面版面将被折起，直到只剩一粒白。
+      - generic [aria-hidden] [ref=e53]:
+        - generic [ref=e54]: "1240"
+        - text: mm — 展柜跨度
+  - generic [ref=e57]:
+    - generic [aria-hidden]: FR·01
+    - generic [ref=e58]:
+      - generic [ref=e59]: FRAME 01
+      - heading "书页 · 点击翻阅" [level=3] [ref=e60]
+    - generic [ref=e62]: ◂ 点页角翻页 ▸
+  - button "♪ 海屿你 — 播放中 · 点此回到放映厅"
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]: ACT 05
+      - heading "折叠 FOLD" [level=2] [ref=e66]
+    - generic [ref=e68]:
+      - generic [ref=e70]:
+        - generic [ref=e71]: 白玉画廊 · N°01
+        - generic [ref=e72]: 终章
+        - heading "白玉画廊 — 完" [level=3] [ref=e73]
+        - paragraph [ref=e74]: 一种颜色，走过五幕。网格记下层次，光影记下体积，冰青一色记下唯一的心跳。
+      - generic [ref=e78]:
+        - generic [ref=e79]: 策展 — WHITE GALLERY
+        - generic [ref=e80]: 材质 — PORCELAIN & GRID
+        - generic [ref=e81]: 色彩 — 一粒冰青
+        - generic [ref=e82]: BGM — 海屿你 / 马也_Crabbit
+        - generic [ref=e83]: FILM — WALLPAPER ENGINE N°3387913668
+  - contentinfo [ref=e85]:
+    - generic [ref=e86]: 白玉画廊
+    - generic [ref=e87]: WHITE GALLERY — MMXXVI · PORCELAIN, GRID & ONE DROP OF ICE

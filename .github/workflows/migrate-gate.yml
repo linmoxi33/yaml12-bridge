@@ -1,0 +1,35 @@
+# Demonstrates the intended CI usage: fail the build if a YAML file in the repo
+# would read differently under a 1.2 parser. Copy this into your own repo and
+# point it at your manifests.
+name: yaml-migration-gate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+
+      # samples/ is deliberately un-migrated -- it is the input to the demo and
+      # to the cross-implementation check. The gate therefore runs against
+      # samples/migrated/, which is the output of `yaml12 migrate --mode value`.
+      # --check exits 1 when a file still needs migration, and writes nothing.
+      - name: Fail if any YAML still needs migration
+        run: yaml12 migrate samples/migrated/ --check --quiet
+
+      # A gate that can never fail proves nothing, so assert that the originals
+      # ARE detected. If this step ever starts passing, the detector broke.
+      - name: Sanity check that the gate can fail
+        run: |
+          if yaml12 migrate samples/ --check --quiet; then
+            echo "gate did not detect the un-migrated samples"
+            exit 1
+          fi
+          echo "gate correctly flagged the originals"
